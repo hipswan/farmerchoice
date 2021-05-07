@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:farmerchoice/clip_shadow_path.dart';
 import 'package:farmerchoice/landing.dart';
+import 'package:farmerchoice/register.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -82,6 +83,7 @@ class Home extends StatelessWidget {
                             ),
                             child: Form(
                               child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -194,6 +196,41 @@ class Home extends StatelessWidget {
                                       child: Text('Submit'),
                                     ),
                                   ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text.rich(
+                                    TextSpan(
+                                      children: [
+                                        TextSpan(
+                                          text: 'Already have an Account ? ',
+                                        ),
+                                        WidgetSpan(
+                                          baseline: TextBaseline.alphabetic,
+                                          child: GestureDetector(
+                                            onTap: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      Register(),
+                                                ),
+                                              );
+                                            },
+                                            child: Text(
+                                              'click here',
+                                              style: TextStyle(
+                                                color: Color(0xff25c384),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    textAlign: TextAlign.center,
+                                    maxLines: 2,
+                                  ),
+
                                   Expanded(
                                     child: Padding(
                                       padding: EdgeInsets.all(
