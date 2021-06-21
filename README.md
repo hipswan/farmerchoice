@@ -1,6 +1,6 @@
 # farmerchoice
 
-A new Flutter project.
+An e-commerce websites for every farm needs at one place, plus an insightful tips on advantage of farming using technology.
 
 ## Getting Started
 
